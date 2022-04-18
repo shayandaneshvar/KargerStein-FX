@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'ir.shayandaneshvar'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+applicationDefaultJvmArgs = ["-Xss1G"]
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    flatDir {
+        dirs 'lib'
+    }
+}
+javafx {
+    version = "11.0.2"
+    modules = ['javafx.controls', 'javafx.web', 'javafx.graphics', 'javafx' +
+            '.fxml', 'javafx.media', 'javafx.base']
+}
+
+
+mainClassName = 'ir.shayandaneshvar.Main'
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation name: 'JavaFXSmartGraph-0.9'
+    compile 'com.jfoenix:jfoenix:9.0.9'
+}
+

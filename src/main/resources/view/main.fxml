@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="255.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.shayandaneshvar.Presenter">
+   <children>
+      <AnchorPane prefHeight="520.0" prefWidth="255.0" style="-fx-background-color: #212125;">
+         <children>
+            <Label layoutX="51.0" layoutY="40.0" prefHeight="25.0" prefWidth="154.0" text="Karger-Stein FX" textFill="#f7f39a">
+               <font>
+                  <Font name="Helvetica-Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="matrixArea" focusColor="#239d60" layoutX="16.0" layoutY="101.0" prefHeight="194.0" prefWidth="223.0" promptText="Enter the adjacency          matrix of graph with size n*n" style="-fx-background-color: #a3de83;" unFocusColor="#f7f39a">
+               <font>
+                  <Font name="Helvetica-Bold" size="18.0" />
+               </font>
+            </JFXTextArea>
+            <JFXTextField fx:id="length" focusColor="#239d60" layoutX="16.0" layoutY="325.0" prefHeight="44.0" prefWidth="87.0" promptText=" n" style="-fx-background-color: #a3de83;" unFocusColor="#f7f39a">
+               <font>
+                  <Font name="Helvetica-Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="16.0" layoutY="395.0" onKeyPressed="#drawGraph" onMouseClicked="#drawGraph" prefHeight="44.0" prefWidth="223.0" style="-fx-background-color: #239d60;" text="Draw Graph" textFill="#f7f39a">
+               <font>
+                  <Font name="Helvetica-Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="16.0" layoutY="455.0" onKeyPressed="#drawMinCut" onMouseClicked="#drawMinCut" prefHeight="44.0" prefWidth="223.0" ripplerFill="#a3de83" style="-fx-background-color: #239d60;" text="Show Results" textFill="#f7f39a">
+               <font>
+                  <Font name="Helvetica-Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXCheckBox fx:id="autoLayout" checkedColor="#239d60" layoutX="119.0" layoutY="325.0" prefHeight="18.0" prefWidth="122.0" selected="true" text="Auto Layout" textFill="#f7f39a" unCheckedColor="#a3de83">
+               <font>
+                  <Font name="Helvetica-Bold" size="14.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="optimized" checkedColor="#239d60" layoutX="119.0" layoutY="347.0" prefHeight="18.0" prefWidth="122.0" text="Optimization" textFill="#f7f39a" unCheckedColor="#a3de83">
+               <font>
+                  <Font name="Helvetica-Bold" size="14.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
